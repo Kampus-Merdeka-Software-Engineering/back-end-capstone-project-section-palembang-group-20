@@ -1,0 +1,249 @@
+/* import font & default setting */
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+body{
+    font-family: 'Days One', sans-serif;
+}
+
+/* main container */
+.main-container {
+    background-color: #F40C0C;
+    height: 110vh;
+}
+
+/* navbar */
+nav {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin-right: 100px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.navbar-menu a:hover {
+    border-color: black;
+}
+
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: red;
+    width: 20px;
+    display: flex;
+
+}
+.logo > img{
+    width: 50px;
+    height: 50px;
+}
+
+/* heaader */
+.header {
+    display: fle;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#rectangel {
+    background-color: black;
+    width: 55px;
+    height: 7px;
+}
+
+.header-items > .item0 {
+    text-align: center;
+}
+
+.header-items > .item1 {
+    text-align: center;
+}
+
+.header-items > .item2 {
+    text-align: center;
+}
+
+.header-items > .item3 {
+    text-align: center;
+}
+
+.header-items > .item0 > img {
+    width: 50px;
+    height: 50px;
+}
+
+.header-items > .item1 > img {
+    width: 50px;
+    height: 50px;
+}
+
+.header-items > .item2 > img {
+    width: 50px;
+    height: 50px;
+}
+
+.header-items > .item3 > img {
+    width: 50px;
+    height: 50px;
+}
+
+/* content */
+.content {
+    background-color: white;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    width: 600px;
+    height: 420px;
+    border-radius: 10px;
+}
+
+/* form */
+.form-header {
+    border-bottom:  solid;
+}
+
+.form-label {
+    display: block;
+}
+
+.form-input1 {
+    background-color: white;
+    width: 250px;
+    height: 10px;
+    padding: 15px;
+    border: 2px solid black;
+    font-family: 'Days One', sans-serif;
+}
+
+.form-input {
+    background-color: white;
+    width: 575px;
+    height: 10px;
+    padding: 15px;
+    border: 2px solid black;
+    font-family: 'Days One', sans-serif;
+}
+
+.form2 {
+    margin-left: 70px;
+}
+
+.form-group {
+    display: flex;
+    margin-top: 20px;
+}
+
+.form-items {
+    margin-top: 20px;
+}
+
+/* button */
+.next-button {
+    font-size: 15px;
+    border: none;
+    padding: 10px;
+    background-color: #66D423;
+    color: white;
+    border-radius: 10px;
+    width: 150px;
+    height: 45px;
+    margin-right: 330px;
+    margin-top: 10px;
+    font-family: 'Days One', sans-serif;
+    float: right;
+    cursor: pointer;
+}
+
+.next-button:hover {
+    background-color: green;
+}
+
+/* Gaya untuk layar kecil (mobile) */
+@media (max-width: 767px) {
+    .main-container {
+        height: auto;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-menu li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .header-items > .item0,
+    .header-items > .item1,
+    .header-items > .item2,
+    .header-items > .item3 {
+        width: auto;
+        height: auto;
+    }
+
+    .header-items > .item0 > img,
+    .header-items > .item1 > img,
+    .header-items > .item2 > img,
+    .header-items > .item3 > img {
+        width: 30px;
+    }
+
+    .content {
+        width: auto;
+    }
+
+    .form-input1 {
+        width: 100%;
+    }
+
+    .form-input {
+        width: 100%;
+    }
+
+    .next-button {
+        margin-right: 50px;
+        margin-top: 40px;
+    }
+}

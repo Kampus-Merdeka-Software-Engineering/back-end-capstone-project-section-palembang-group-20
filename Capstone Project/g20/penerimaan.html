@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Project Group 20</title>
+    <link rel="icon" href="assets/Star 1.png">
+    <link rel="stylesheet" href="css/penerimaan.css">
+</head>
+<body>
+    <!-- main-container start -->
+    <div class="main-container">
+
+        <!-- navbar-container start -->
+        <nav class="navbar-container">
+            <div class="logo">
+                <img src="assets/Star 1.png" alt="Logo">
+                G20 EXPRESS SHIPPING
+            </div>
+                <ul class="navbar-menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Layanan Kami</a></li>
+                    <li><a href="lacak.html">Lacak Pengiriman</a></li>
+                </ul>   
+        </nav>
+        <!-- navbar-container end -->
+
+        <!-- header start -->
+        <div class="header">
+            <div class="header-items">
+            <div class="item0">
+                <img src="assets/detail.svg" alt=""><p>Detail Pengiriman</p>
+            </div>
+            <div id="rectangel"></div>
+            <div class="item1">
+                <img src="assets/ringkas.svg" alt=""><p>Penerimaan</p>
+            </div>
+            <div id="rectangel"></div>
+            <div class="item2">
+                <img src="assets/bayar.svg" alt=""><p>Pembayaran</p>
+            </div>
+            <div id="rectangel"></div>
+            <div class="item3">
+                <img src="assets/selesai.svg" alt=""><p>Selesai</p>
+            </div>
+        </div>
+        <!-- navbar-container end -->
+
+        <!-- content start -->
+        <div class="content">
+            <!-- form start -->
+            <form>
+                <div class="form-header">
+                    <p>Penerimaan</p>
+                </div>
+                <div class="form-items">
+                    <label class="form-label" for="deskripsi">Deskripsi Barang</label>
+                    <input class="form-input" type="text" id="deskripsi" name="deskripsi" placeholder="Mis : Pakaian, Makanan atau Surat" required>
+                </div>
+
+                <div class="form-group">
+                    <div class="form1">
+                    <label class="form-label1" for="berat">Berat (kg)</label>
+                    <input class="form-input1" type="text" id="berat" name="berat" placeholder="XX" required>
+                    </div>
+                    <div class="form2">
+                    <label class="form-label1" for="layanan">Layanan Pengiriman</label>
+                    <input class="form-input1" type="text" id="layanan" name="layanan" placeholder="Reguler atau Express" required>
+                </div>
+                </div>
+
+                <div class="form-items">
+                    <label class="form-label" for="nama">Nama Penerima</label>
+                    <input class="form-input" type="text" id="nama" name="nama" placeholder="Nama penerima" required>
+                </div>
+
+                <div class="form-items">
+                    <label class="form-label" for="alamat">Alamat Penerima</label>
+                    <input class="form-input" type="text" id="alamat" name="alamat" placeholder="Alamat" required>
+                </div>
+                
+                <div class="form-items">
+                    <label class="form-label" for="no">No.Telepon Penerima</label>
+                    <input class="form-input" type="text" id="no" deskripsi="no" placeholder="+62 | 82XXXXXXXX" required>
+                </div>
+            </form>
+            <!-- form end -->
+        </div>
+        <!-- content end -->
+        <button onclick="window.location.href='pembayaran.html'" class="next-button" type="submit">Selanjutnya</button>
+    </div>
+    <!-- main-container end -->
+</body>
+</html>

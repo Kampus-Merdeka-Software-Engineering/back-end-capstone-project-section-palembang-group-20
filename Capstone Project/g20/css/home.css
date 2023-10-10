@@ -1,0 +1,268 @@
+/* import font & default setting */
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* body */
+body{
+    font-family: 'Days One', sans-serif;
+}
+
+/* main container */
+.main-container {
+    background-color: #F40C0C;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* content */
+.content-container {
+    display: flex;
+    flex: 1;
+}
+
+.left {
+    flex: 0.5;
+    padding: 20px;
+    color: #fff;
+}
+
+.left > h2 {
+    margin-top: 70px
+}
+
+.left > .a {
+    margin-top: 70px;
+    width: 200px;
+    margin-bottom: 60px;
+}
+
+.left > .b {
+    font-size: 10px;
+}
+
+/* button cek */
+.button-cek {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 350px;
+    font-family: 'Days One', sans-serif;
+    cursor: pointer;
+}
+
+.button-cek:hover {
+    background-color: gainsboro;
+}
+
+.right {
+    flex: 0.5;
+    margin-top: 50px;
+}
+
+/* navbar */
+nav {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin-left: 80px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.navbar-menu a:hover {
+    border-color: black;
+}
+
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.button-primary {
+    font-size: 15px;
+    border: none;
+    padding: 10px;
+    background-color: #66D423;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    font-family: 'Days One', sans-serif;
+    cursor: pointer;
+}
+
+.button-primary:hover {
+    background: green;
+}
+
+.button-login {
+    font-size: 15px;
+    background-color: #fff;
+    border: 2px solid green;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    font-family: 'Days One', sans-serif;
+    cursor: pointer;
+}
+
+.button-login:hover {
+    background: green;
+    color: white;
+}
+
+.logo {
+    color: red;
+    width: 20px;
+    display: flex;
+
+}
+.logo > img{
+    width: 50px;
+    height: 50px;
+}
+
+/* lacak container */
+.lacak-container {
+    background-color: #F40C0C;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* lacak content */
+
+h2 {
+    color: white;
+}
+
+/* form */
+.form-label {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 400px;
+    height: 60px;
+    font-family: 'Days One', sans-serif;
+}
+
+/* button secondary */
+.button-secondary {
+    background-color: #66D423;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    margin-top: 40px;
+    margin-left: 50px;
+    font-family: 'Days One', sans-serif;
+    cursor: pointer;
+}
+
+.button-lacak:hover {
+    background-color: green;
+}
+
+/* cek container */
+.cek-container {
+    background-color: #F40C0C;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Gaya untuk layar kecil (mobile) */
+@media (max-width: 767px) {
+    .navbar-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .navbar-menu {
+        margin-top: 20px;
+    }
+
+    .navbar-menu li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .content-container {
+        display: block;
+    }
+
+    .left > h2,
+    .left > p {
+        margin-top: 20px;
+    }
+
+    .button-secondary {
+        width: 100%;
+    }
+
+    .right {
+        margin-top: 20px;
+    }
+
+    .about-content {
+        display: block;
+        width: auto;
+        height: auto;
+    }
+
+    #circle {
+        width: auto;
+        height: auto;
+    }
+
+    .layanan-content {
+        display: block;
+        width: auto;
+        height: auto;
+    }
+}

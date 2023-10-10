@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Project Group 20</title>
+    <link rel="icon" href="assets/Star 1.png">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="path-to-sweetalert2.min.css">
+    <script src="path-to-sweetalert2.min.js"></script>
+    <script src="js/session.js"></script>
+
+<body>
+    <!-- navbar-container start -->
+    <nav class="navbar-container">
+        <div class="logo">
+            <img src="assets/Star 1.png" alt="Logo">
+            G20 EXPRESS SHIPPING
+        </div>
+            <ul class="navbar-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="layanan.html">Layanan Kami</a></li>
+                <li><a href="#lacak">Lacak Pengiriman</a></li>
+            </ul>  
+        <div class="navbar-button" id="navbar-button">
+                <button onclick="window.location.href='kirim.html'" type="submit" class="button-primary">Kirim</button>
+        </div>
+    </nav>
+    <!-- navbar-container end -->
+
+    <!-- main-container start -->
+    <div id="home" class="main-container">
+        <!-- content start -->
+        <div class="content-container">
+            <div class="left">
+                <h2>Kini Anda dapat kirim barang hingga keluar negeri tanpa mengurus dokumen yang  melelahkan!</h2>
+                <p class="a">Yuk dapatkan banyak promo ongkir dari G20 Express Shipping</p>
+                <button onclick="window.location.href='#cek'" type="submit" class="button-cek">Cek harga di sini!</button>
+                <p class="b">*sebelum mengirim, sebaiknya cek harga terlebih dahulu</p>
+            </div>
+            <div class="right">
+                <img src="assets/qqq.png" alt="">
+            </div>
+        </div>
+        <!-- content end -->
+        
+    </div>
+    <!-- main-container end -->
+
+    <!-- lacak container start -->
+        <div id="lacak" class="lacak-container">
+            <div class="lacak-content">
+                <h2>Lacak Pengiriman</h2>
+            <form>
+                <div class="form-item">
+                    <label class="form-label" for="kode">Kode Pengiriman</label>
+                    <input class="form-input" type="text" id="kode" name="kode" placeholder="ES.XXXX23XXXX" required>
+                </div>
+                <button type="submit" class="button-secondary">Lacak Pengiriman</button>
+            </form>
+            </div>
+        </div>
+        <!-- lacak container end -->
+
+        <!-- cek-container start -->
+        <div id="cek" class="cek-container">
+            <div class="cek-content">
+                <h2>Biaya Pengiriman</h2>
+            <form id="cek-form">
+                <div class="berat">
+                    <label class="form-label" for="berat">Berat (kg)</label>
+                    <input class="form-input" type="number" id="berat" name="berat" placeholder="0" min="0" required>
+                </div>
+                <div class="jarak">
+                    <label class="form-label" for="jarak">Jarak Pengiriman</label>
+                    <input class="form-input" type="text" id="jarak" name="jarak" placeholder="Jarak Pengiriman" required>
+                </div>
+            <button type="submit" class="button-secondary">Cek Harga</button>
+            </form>
+            </div>
+        </div>
+    <!-- container-right end -->
+    <script src="js/cek-harga.js"></script>    
+</body>
+</html>

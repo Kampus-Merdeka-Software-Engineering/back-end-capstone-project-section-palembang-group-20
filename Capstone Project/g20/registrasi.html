@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Project Group 20</title>
+    <link rel="icon" href="assets/Star 1.png">
+    <link rel="stylesheet" href="css/registrasi.css">
+</head>
+
+<body>
+    <!-- navbar-container start -->
+    <nav class="navbar-container">
+        <div class="logo">
+            <img src="assets/Star 1.png" alt="Logo">
+            G20 EXPRESS SHIPPING
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Layanan Kami</a></li>
+            <li><a href="#">Lacak Pengiriman</a></li>
+        </ul>
+    </nav>
+    <!-- navbar-container end -->
+
+    <!-- main-container start -->
+    <div class="main-container">
+        <!-- content start -->
+        <div class="content">
+            <form id="signupForm">
+                <h2>REGISTRASI</h2>
+                <input class="form-input" type="text" id="nama_lengkap" name="nama_lengkap" placeholder="Nama Lengkap" required>
+                <input class="form-input" type="text" id="no_hp" name="no_hp" placeholder="No. Handphone" required>
+                <input class="form-input" type="text" id="username" name="username" placeholder="Username" required>
+                <div class="password-toggle" id="togglePassword">
+                    <input class="form-input" type="password" id="password" name="password" placeholder="Password"
+                        required>
+                    <img src="assets/eye-close.png" alt="Hide Password" id="eyeClosed">
+                    <img src="assets/eye-open.png" alt="Show Password" id="eyeOpen">
+                </div>
+                <button type="submit" class="reg-button">Daftar</button>
+                <p>Sudah punya akun? <a href="login.html">Login</a></p>
+            </form>
+        </div>
+        <!-- content end -->
+    </div>
+    <!-- main-container end -->
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const formData = {
+                username: document.getElementById('username').value,
+                no_hp: document.getElementById('no_hp').value,
+                nama_lengkap: document.getElementById('nama_lengkap').value,
+                password: document.getElementById('password').value
+            };
+
+            fetch('http://localhost:3000/api/auth', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(res => {
+
+                const { data } = res;
+                console.log(data)
+                if (data.success) {
+
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Register Successful!',
+                        text: data.message,
+                        timer: 2000, 
+                        showConfirmButton: false,
+                    }).then(() => {
+                        window.location.href = 'login.html';
+                    });
+                }
+                else {
+                    console.error('Error:', data.error.message);
+
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Register Failed',
+                        text: data.error.message
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Register Failed',
+                    text: 'An error occurred while trying to register. Please try again.'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
